@@ -23,8 +23,6 @@ try {
         $params['password']
     );
      $pdo = new PDO($db);
-
-     dump($db);
     //$pdo = new PDO('mysql:host=localhost;dbname=jumpstart', 'root', 'covid19krauq');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //$pdo->exec('SET NAMES "utf8"');
