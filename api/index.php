@@ -1,7 +1,6 @@
 <?php
-require_once 'config.php';
-require_once 'helpers.inc.php';
-require_once 'db.inc.php';
+require_once __DIR__  . '/helpers.inc.php';
+require_once __DIR__ . '/db.inc.php';
 $sql = "SELECT * from employee";
 $st = doQuery($pdo, $sql, 'fail');
 $rows = $st->fetchAll(PDO::FETCH_ASSOC); 
