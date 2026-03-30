@@ -5,7 +5,7 @@ try {
     $pwd = $matches[1] ?? null;
     $connect = $matches[2] ?? null;
 
-    dump($env);
+    dump($pwd);
     if (!$pwd) {
          throw new Exception('Unable to connect to the database server innit');
     }
