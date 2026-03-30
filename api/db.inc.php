@@ -5,8 +5,9 @@ try {
     $pwd = $matches[1] ?? null;
     $connect = $matches[2] ?? null;
 
+    dump($env);
     if (!$pwd) {
-         throw new Exception('Unable to connect to the database server');
+         throw new Exception('Unable to connect to the database server innit');
     }
 
     //postgresql://neondb_owner:npg_mVCK8dWTiRB7@ep-little-band-ab6qi5hl-pooler.eu-west-2.aws.neon.tech/jumpstart?sslmode=require&channel_binding=require
