@@ -6,7 +6,6 @@ $sql = "SELECT * from employee";
 $st = doQuery($pdo, $sql, 'fail');
 $rows = $st->fetchAll(PDO::FETCH_ASSOC); 
 
-dump($rows);
 include TEMPLATE . 'head.html.php'; ?>
 <h1>Jumpstart</h1>
 <ul>
