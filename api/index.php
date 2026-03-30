@@ -5,7 +5,7 @@ require_once __DIR__ . '/db.inc.php';
 $sql = "SELECT * from employee";
 $st = doQuery($pdo, $sql, 'fail');
 $rows = $st->fetchAll(PDO::FETCH_ASSOC); 
-include 'templates/head.html.php'; ?>
+include TEMPLATE . 'head.html.php'; ?>
 <h1>Jumpstart</h1>
 <ul>
     <?php
