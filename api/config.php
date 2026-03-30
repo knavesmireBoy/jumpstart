@@ -1,4 +1,4 @@
 <?php
 
-define('TEMPLATE', "/templates/");
-define('CONNECT', "/db.inc.php");
+define("TEMPLATE", __DIR__ . '../../templates/');
+define('CONNECT', __DIR__  . '/db.inc.php');
