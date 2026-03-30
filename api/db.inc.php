@@ -8,9 +8,10 @@ try {
     if (!$pwd) {
         throw new Exception('Unable to connect to the database server innit');
     }
+
     //note cannot get postgres drivers to work in home environment
     $params = ['host' => '127.0.0.1', 'port' => 5432, 'database' => 'uploads', 'user' => 'andrewjsykes', 'password' => 'covid19krauq'];
-    $params = ['host' => $connect, 'port' => 5432, 'database' => 'uploads', 'user' => 'neondb_owner', 'password' => $pwd];
+    $params = ['host' => $connect, 'port' => 5432, 'database' => 'jumpstart', 'user' => 'neondb_owner', 'password' => $pwd];
     $db = sprintf(
         "pgsql:host=%s;port=%d;dbname=%s;user=%s;password=%s",
         $params['host'],
@@ -25,7 +26,6 @@ try {
     //$pdo->exec('SET NAMES "utf8"');
     $pdo->exec('SET search_path TO jumpstart');
 } catch (PDOException $e) {
-    dump($e);
     $output = 'Unable to connect to the database server: ' . $e->getMessage();
     $error = $output;
     //  include TEMPLATE . 'output.html.php';
