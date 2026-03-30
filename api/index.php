@@ -14,10 +14,10 @@ include TEMPLATE . 'head.html.php'; ?>
 
         $fname = $row['first_name'];
         $lname = $row['last_name'];
-        include './templates/_list.html.php';
+        include TEMPLATE . '_list.html.php';
     } ?>
 
 </ul>
 <?php
 
-include 'templates/footer.html.php'; ?>
+include TEMPLATE . 'footer.html.php'; ?>
